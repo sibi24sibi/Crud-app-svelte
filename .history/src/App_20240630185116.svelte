@@ -1,0 +1,21 @@
+<script>
+  import svelteLogo from "./assets/svelte.svg";
+  import viteLogo from "/vite.svg";
+  import Counter from "./lib/Counter.svelte";
+  import Navbar from "./Components/Navbar.svelte";
+  import Video from "./Components/InputData.svelte";
+  import InputData from "./Components/InputData.svelte";
+  import AddBook from "./components/AddBook.svelte";
+  import BookList from "./components/BookList.svelte";
+</script>
+
+<main>
+  <Navbar />
+
+  <h1>Book List</h1>
+  <AddBook />
+  <BookList />
+</main>
+
+<style>
+</style>

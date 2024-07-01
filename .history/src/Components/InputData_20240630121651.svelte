@@ -1,0 +1,32 @@
+<script>
+  import Input from "./Input.svelte";
+  import { writable } from "svelte/store";
+  let letValue = "";
+  const storeValue = writable("");
+  const reset = () => {
+    letValue = "";
+    $storeValue = "";
+  };
+
+  const save = () => {
+    if (letValue || $storeValue) {
+      console.log("Value saved:", letValue, $storeValue);
+    } else {
+      console.log("No value to save");
+    }
+  };
+</script>
+
+<div class="flex flex-col justify-center gap-5 items-center">
+  <Input bind:value={letValue} />
+  <Input bind:value={$storeValue} />
+  <button on:click={reset}>reset</button>
+  <button on:click={save}>save</button>
+</div>
+
+<style>
+  input {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+</style>
